@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/top-provider/!svn/ver/11881/trunk/top-auto-sdk-handle/taobao-sdk-net/Util
+END
+FileItem.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/top-provider/!svn/ver/8610/trunk/top-auto-sdk-handle/taobao-sdk-net/Util/FileItem.cs
+END
+RequestValidator.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/top-provider/!svn/ver/7471/trunk/top-auto-sdk-handle/taobao-sdk-net/Util/RequestValidator.cs
+END
+WebUtils.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/top-provider/!svn/ver/11881/trunk/top-auto-sdk-handle/taobao-sdk-net/Util/WebUtils.cs
+END
+TopUtils.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/top-provider/!svn/ver/4308/trunk/top-auto-sdk-handle/taobao-sdk-net/Util/TopUtils.cs
+END
+TopContext.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Util/TopContext.cs
+END
+AtsUtils.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/top-provider/!svn/ver/8610/trunk/top-auto-sdk-handle/taobao-sdk-net/Util/AtsUtils.cs
+END

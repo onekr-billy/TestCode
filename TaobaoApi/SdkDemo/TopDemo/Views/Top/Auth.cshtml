@@ -1,0 +1,37 @@
+﻿@model TopDemo.Models.AuthModel
+@{
+    ViewBag.Title = "Auth";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+@Html.ValidationSummary(true, "请输入 AppKey AppSecret！")
+@using (Html.BeginForm())
+{
+    <div>
+        <fieldset>
+            <legend>淘宝授权</legend>
+            <div class="editor-label">
+                @Html.LabelFor(m => m.AppKey)
+            </div>
+            <div class="editor-field" ref="21098277,21093426,1021059861">
+                @Html.TextBoxFor(m => m.AppKey, new { style = "width:100%;" })
+                @Html.ValidationMessageFor(m => m.AppKey)
+            </div>
+            <div class="editor-label">
+                @Html.LabelFor(m => m.AppSecret)
+            </div>
+            <div class="editor-field" ref="d223327d7a658ba1cbb592b8a289af48,1d5dfd4badd7658c4600571dcf83475b,sandbox78d65ecd92b6ca6fb620c7b9d">
+                @Html.TextBoxFor(m => m.AppSecret, new { style = "width:100%;" })
+                @Html.ValidationMessageFor(m => m.AppSecret)
+            </div>
+            <div class="editor-label">
+                @Html.CheckBoxFor(m => m.RememberMe)
+                @Html.LabelFor(m => m.RememberMe)
+            </div>
+            <p>
+                <input type="submit" value="授权" />
+            </p>
+        </fieldset>
+    </div>
+}

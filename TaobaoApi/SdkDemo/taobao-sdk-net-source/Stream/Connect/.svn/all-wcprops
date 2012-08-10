@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/top-provider/!svn/ver/12344/trunk/top-auto-sdk-handle/taobao-sdk-net/Stream/Connect
+END
+HttpClient.cs
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/top-provider/!svn/ver/12344/trunk/top-auto-sdk-handle/taobao-sdk-net/Stream/Connect/HttpClient.cs
+END
+HttpResponse.cs
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/top-provider/!svn/ver/11742/trunk/top-auto-sdk-handle/taobao-sdk-net/Stream/Connect/HttpResponse.cs
+END
+IConnectionLifeCycleListener.cs
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/top-provider/!svn/ver/12148/trunk/top-auto-sdk-handle/taobao-sdk-net/Stream/Connect/IConnectionLifeCycleListener.cs
+END
+IHttpConnectionConfiguration.cs
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/top-provider/!svn/ver/11742/trunk/top-auto-sdk-handle/taobao-sdk-net/Stream/Connect/IHttpConnectionConfiguration.cs
+END
+ConnectionListenerDemo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/top-provider/!svn/ver/12148/trunk/top-auto-sdk-handle/taobao-sdk-net/Stream/Connect/ConnectionListenerDemo.cs
+END

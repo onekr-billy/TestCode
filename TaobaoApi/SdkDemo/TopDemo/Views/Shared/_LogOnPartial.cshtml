@@ -1,0 +1,31 @@
+﻿@using TopCore
+<!--
+@if (Request.IsAuthenticated)
+{
+    <text>Welcome <b>@Context.User.Identity.Name</b>!
+    [ @Html.ActionLink("Log Off", "LogOff", "Account") ]</text>
+}
+else
+{
+    @:[ @Html.ActionLink("Log On", "LogOn", "Account") ]
+}
+    -->
+@{
+    var tc = new TopConfigs();
+    ViewBag.SessionKey = tc.SessionKey;
+}
+@if (!string.IsNullOrWhiteSpace(tc.SessionKey))
+{
+    @:[@Html.ActionLink("取消授权", "AuthLogOut", "Top")]
+    @:[@Html.ActionLink("刷新Token", "RefreshToken", "Top", new { Target="_blank" })]
+    <div>
+        SessionKey:[@tc.SessionKey]</div>
+    <div>
+        AppKey:[@tc.AppKey]</div>
+    <div>
+        AppSecret:[@tc.AppSecret]</div>
+}
+else
+{
+    @:[@Html.ActionLink("授权", "Auth", "Top")]
+}

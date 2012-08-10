@@ -1,0 +1,11 @@
+安装步骤
+
+1.关闭所有正在运行的Visual Studio 2008。
+
+2.复制SqlServerQueryVisualizer.dll程序集到本地的\Program Files\Microsoft Visual Studio 9.0\Common7\Packages\Debugger\Visualizers目录下：
+
+3.OK，重新运行Visual Studio 2008，现在就可以使用LINQ to SQL可视化调试器了。
+
+使用方法
+
+设置断点，运行调试，当查询表达式被赋值后，使用调试器即可查看product变量：

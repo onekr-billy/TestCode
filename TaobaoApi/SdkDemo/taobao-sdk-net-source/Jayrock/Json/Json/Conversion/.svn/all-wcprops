@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/Conversion
+END
+CustomTypeDescriptor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/Conversion/CustomTypeDescriptor.cs
+END
+ImporterCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/Conversion/ImporterCollection.cs
+END
+ImportContext.cs
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/Conversion/ImportContext.cs
+END
+ImporterListSectionHandler.cs
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/Conversion/ImporterListSectionHandler.cs
+END
+IExporter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/Conversion/IExporter.cs
+END
+IJsonImportable.cs
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/Conversion/IJsonImportable.cs
+END
+JsonIgnoreAttribute.cs
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/Conversion/JsonIgnoreAttribute.cs
+END
+ExporterCollection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/Conversion/ExporterCollection.cs
+END
+ExportContext.cs
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/Conversion/ExportContext.cs
+END
+ExporterListSectionHandler.cs
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/Conversion/ExporterListSectionHandler.cs
+END
+IJsonExportable.cs
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/Conversion/IJsonExportable.cs
+END
+AnyType.cs
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/Conversion/AnyType.cs
+END
+IImporter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/Conversion/IImporter.cs
+END
+JsonConvert.cs
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/Conversion/JsonConvert.cs
+END

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/top-provider/!svn/ver/12827/trunk/top-auto-sdk-handle/taobao-sdk-net/Parser
+END
+ITopReader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Parser/ITopReader.cs
+END
+TopJsonReader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Parser/TopJsonReader.cs
+END
+TopXmlParser.cs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/top-provider/!svn/ver/12827/trunk/top-auto-sdk-handle/taobao-sdk-net/Parser/TopXmlParser.cs
+END
+TopAttribute.cs
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Parser/TopAttribute.cs
+END
+ITopParser.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/top-provider/!svn/ver/12827/trunk/top-auto-sdk-handle/taobao-sdk-net/Parser/ITopParser.cs
+END
+TopJsonParser.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/top-provider/!svn/ver/12827/trunk/top-auto-sdk-handle/taobao-sdk-net/Parser/TopJsonParser.cs
+END

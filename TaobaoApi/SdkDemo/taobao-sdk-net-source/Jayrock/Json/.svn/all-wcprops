@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/top-provider/!svn/ver/4502/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json
+END
+IndentedTextWriter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/IndentedTextWriter.cs
+END
+UnixTime.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/UnixTime.cs
+END
+Compat.cs
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Compat.cs
+END
+BooleanObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/BooleanObject.cs
+END
+InternetDate.cs
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/InternetDate.cs
+END

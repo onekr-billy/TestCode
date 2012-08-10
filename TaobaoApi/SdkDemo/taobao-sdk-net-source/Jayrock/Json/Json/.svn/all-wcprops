@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/top-provider/!svn/ver/4502/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json
+END
+JsonTextWriter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/JsonTextWriter.cs
+END
+JsonNumber.cs
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/JsonNumber.cs
+END
+EmptyJsonWriter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/EmptyJsonWriter.cs
+END
+JsonReaderBase.cs
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/JsonReaderBase.cs
+END
+JsonException.cs
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/JsonException.cs
+END
+JsonReader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/JsonReader.cs
+END
+InvalidMemberException.cs
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/InvalidMemberException.cs
+END
+JsonRecorder.cs
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/JsonRecorder.cs
+END
+JsonString.cs
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/top-provider/!svn/ver/4502/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/JsonString.cs
+END
+JsonObject.cs
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/JsonObject.cs
+END
+JsonTokenClass.cs
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/JsonTokenClass.cs
+END
+JsonTextReader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/JsonTextReader.cs
+END
+JsonWriterBase.cs
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/JsonWriterBase.cs
+END
+JsonWriterBracket.cs
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/JsonWriterBracket.cs
+END
+BufferedCharReader.cs
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/BufferedCharReader.cs
+END
+JsonNull.cs
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/JsonNull.cs
+END
+JsonWriter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/JsonWriter.cs
+END
+JsonArray.cs
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/JsonArray.cs
+END
+JsonBoolean.cs
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/JsonBoolean.cs
+END
+JsonToken.cs
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repos/top-provider/!svn/ver/4178/trunk/top-auto-sdk-handle/taobao-sdk-net/Jayrock/Json/Json/JsonToken.cs
+END

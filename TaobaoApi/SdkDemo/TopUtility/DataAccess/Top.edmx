@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TopModel.Store" Alias="Self" Provider="System.Data.SQLite" ProviderManifestToken="ISO8601" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="TopModelStoreContainer">
+          <EntitySet Name="Users" EntityType="TopModel.Store.Users" store:Type="Tables" store:Name="Users">
+            <DefiningQuery>SELECT 
+      [Users].[U_Guid] AS [U_Guid], 
+      [Users].[U_Name] AS [U_Name], 
+      [Users].[U_Password] AS [U_Password], 
+      [Users].[U_Top_AppKey] AS [U_Top_AppKey], 
+      [Users].[U_Top_AppSecret] AS [U_Top_AppSecret], 
+      [Users].[U_Top_SessionKey] AS [U_Top_SessionKey], 
+      [Users].[U_Top_CallbackData] AS [U_Top_CallbackData], 
+      [Users].[U_LastUpdateTime] AS [U_LastUpdateTime]
+      FROM [Users] AS [Users]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <!--生成过程中发现错误:
+      警告 6002: 表/视图“main.Users”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="U_Guid" />
+            <PropertyRef Name="U_Name" />
+            <PropertyRef Name="U_Password" />
+            <PropertyRef Name="U_Top_AppKey" />
+            <PropertyRef Name="U_Top_AppSecret" />
+            <PropertyRef Name="U_Top_SessionKey" />
+            <PropertyRef Name="U_Top_CallbackData" />
+            <PropertyRef Name="U_LastUpdateTime" />
+          </Key>
+          <Property Name="U_Guid" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="U_Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="U_Password" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="U_Top_AppKey" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="U_Top_AppSecret" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="U_Top_SessionKey" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="U_Top_CallbackData" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="U_LastUpdateTime" Type="datetime" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TopModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="TopEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Users" EntityType="TopModel.User" />
+        </EntityContainer>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="U_Guid" />
+            <PropertyRef Name="U_Name" />
+            <PropertyRef Name="U_Password" />
+            <PropertyRef Name="U_Top_AppKey" />
+            <PropertyRef Name="U_Top_AppSecret" />
+            <PropertyRef Name="U_Top_SessionKey" />
+            <PropertyRef Name="U_Top_CallbackData" />
+            <PropertyRef Name="U_LastUpdateTime" />
+          </Key>
+          <Property Name="U_Guid" Type="Guid" Nullable="false" />
+          <Property Name="U_Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="U_Password" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="U_Top_AppKey" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="U_Top_AppSecret" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="U_Top_SessionKey" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="U_Top_CallbackData" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="U_LastUpdateTime" Type="DateTime" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TopModelStoreContainer" CdmEntityContainer="TopEntities">
+          <EntitySetMapping Name="Users"><EntityTypeMapping TypeName="TopModel.User"><MappingFragment StoreEntitySet="Users">
+            <ScalarProperty Name="U_Guid" ColumnName="U_Guid" />
+            <ScalarProperty Name="U_Name" ColumnName="U_Name" />
+            <ScalarProperty Name="U_Password" ColumnName="U_Password" />
+            <ScalarProperty Name="U_Top_AppKey" ColumnName="U_Top_AppKey" />
+            <ScalarProperty Name="U_Top_AppSecret" ColumnName="U_Top_AppSecret" />
+            <ScalarProperty Name="U_Top_SessionKey" ColumnName="U_Top_SessionKey" />
+            <ScalarProperty Name="U_Top_CallbackData" ColumnName="U_Top_CallbackData" />
+            <ScalarProperty Name="U_LastUpdateTime" ColumnName="U_LastUpdateTime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Top">
+        <EntityTypeShape EntityType="TopModel.User" Width="1.5" PointX="0.75" PointY="0.75" Height="2.5430916341145835" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

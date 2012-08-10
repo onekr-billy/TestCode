@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/top-provider/!svn/ver/11837/trunk/top-auto-sdk-handle/taobao-sdk-net/Stream/Message
+END
+ITopCometMessageListener.cs
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/top-provider/!svn/ver/11742/trunk/top-auto-sdk-handle/taobao-sdk-net/Stream/Message/ITopCometMessageListener.cs
+END
+MessageListenerDemo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/top-provider/!svn/ver/11742/trunk/top-auto-sdk-handle/taobao-sdk-net/Stream/Message/MessageListenerDemo.cs
+END
+MessageStreamImpl.cs
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/top-provider/!svn/ver/11837/trunk/top-auto-sdk-handle/taobao-sdk-net/Stream/Message/MessageStreamImpl.cs
+END
+IMessageHandlerConfiguration.cs
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/top-provider/!svn/ver/11742/trunk/top-auto-sdk-handle/taobao-sdk-net/Stream/Message/IMessageHandlerConfiguration.cs
+END
+StreamMsgConsumeFactory.cs
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/top-provider/!svn/ver/11742/trunk/top-auto-sdk-handle/taobao-sdk-net/Stream/Message/StreamMsgConsumeFactory.cs
+END
