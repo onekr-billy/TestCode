@@ -90,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="callback\taobao.aspx" />
+    <Content Include="Files\001.jpg" />
     <Content Include="Global.asax" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

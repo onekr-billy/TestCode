@@ -11,6 +11,7 @@ using Top.Api.Response;
 using System.Diagnostics;
 using Jayrock.Json;
 using Newtonsoft.Json.Linq;
+using System.Net.Mime;
 
 
 namespace TopDemo.Controllers
@@ -99,6 +100,18 @@ namespace TopDemo.Controllers
             Response.Redirect(tConfig.TopApiRefreshTokenUrl);
 
             return View();
+        }
+
+        public ActionResult Image(string id)
+        {
+            var path = Server.MapPath(@"/Files/" + id + ".jpg");
+            return File(path, "image/jpeg");
+        }
+
+        public ActionResult ReturnJson()
+        {
+            var dict = new Dictionary<string, string> { { "aa", "bb" }, { "cc", "ee" } };
+            return Json(dict, JsonRequestBehavior.AllowGet);
         }
 
     }
