@@ -8,14 +8,14 @@ using System.Threading;
 
 namespace SocketService.StockCore
 {
-    public class SocketServer
+    public class SocketServer : AbsSocket
     {
-        private static SocketServer _obj;
-        private static readonly Object LockObj = new object();
-
         SocketServer()
         {
         }
+
+        private static SocketServer _obj;
+        private static readonly Object LockObj = new object();
 
         public static SocketServer GetInstance
         {
@@ -29,45 +29,36 @@ namespace SocketService.StockCore
             }
         }
 
-        private IPAddress _ipAddress;
-        private Socket _socketServer;
-        private Thread _socketThread;
-
-        public int Port { get; set; }
-        public string Server { get; private set; }
-
-        private readonly ManualResetEvent _acceptDone = new ManualResetEvent(false);
-
         /// <summary>
         /// 开始运行
         /// </summary>
-        public void Run()
+        public override void Start()
         {
             if (Port > 0)
             {
-                if(_socketServer!=null)
+                if(SocketObj!=null)
                 {
-                    _socketServer.Disconnect(true);
+                    SocketObj.Disconnect(true);
                 }
                 var opHostEntry = Dns.GetHostEntry(Dns.GetHostName());
-                _ipAddress = (from a in opHostEntry.AddressList where a.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork select a).First();
-                if (_ipAddress != null)
+                IpAddress = (from a in opHostEntry.AddressList where a.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork select a).First();
+                if (IpAddress != null)
                 {
-                    var ipe = new IPEndPoint(_ipAddress, Port);
-                    _socketServer = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-                    _socketServer.Bind(ipe);
-                    _socketServer.Listen(10);
+                    var ipe = new IPEndPoint(IpAddress, Port);
+                    SocketObj = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                    SocketObj.Bind(ipe);
+                    SocketObj.Listen(100);
 
-                    _socketThread = new Thread(() =>
+                    SocketThread = new Thread(() =>
                                                    {
                                                        while (true)
                                                        {
-                                                           _acceptDone.Reset();
-                                                           _socketServer.BeginAccept(AcceptAsyncCallback, _socketServer);
-                                                           _acceptDone.WaitOne();
+                                                           AccepDone.Reset();
+                                                           SocketObj.BeginAccept(AcceptAsyncCallback, SocketObj);
+                                                           AccepDone.WaitOne();
                                                        }
                                                    });
-                    _socketThread.Start();
+                    SocketThread.Start();
 
                 }
             }
@@ -77,9 +68,9 @@ namespace SocketService.StockCore
         /// 接受数据
         /// </summary>
         /// <param name="result"></param>
-        public void AcceptAsyncCallback(IAsyncResult result)
+        public override void AcceptAsyncCallback(IAsyncResult result)
         {
-            _acceptDone.Set();
+            AccepDone.Set();
 
             var listener = (Socket)result.AsyncState;
             var callbackSocket = listener.EndAccept(result);
@@ -100,7 +91,7 @@ namespace SocketService.StockCore
         /// 收到数据
         /// </summary>
         /// <param name="result"></param>
-        public void ReceiveAsyncCallback(IAsyncResult result)
+        public override void ReceiveAsyncCallback(IAsyncResult result)
         {
             var socketState = (SocketState)result.AsyncState;
             var handler = socketState.State;
@@ -131,15 +122,24 @@ namespace SocketService.StockCore
             }
         }
 
-        public void Send(Socket handler, string msg)
+        /// <summary>
+        /// 开始发送
+        /// </summary>
+        /// <param name="handler"></param>
+        /// <param name="msg"></param>
+        public override void Send(Socket handler, string msg)
         {
             // 消息格式转换.
             var byteData = Encoding.ASCII.GetBytes(msg);
             // 开始发送数据给远程目标.
-            handler.BeginSend(byteData, 0, byteData.Length, 0, SendCallback, handler);
+            handler.BeginSend(byteData, 0, byteData.Length, 0, SendAsyncCallback, handler);
         }
 
-        public void SendCallback(IAsyncResult result)
+        /// <summary>
+        /// 发送回调
+        /// </summary>
+        /// <param name="result"></param>
+        public override void SendAsyncCallback(IAsyncResult result)
         {
             var handler = (Socket)result.AsyncState;
             var bytesSended = handler.EndSend(result);
@@ -148,5 +148,14 @@ namespace SocketService.StockCore
         }
 
 
+        public override void ConnectCallback(IAsyncResult result)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Stop()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -8,12 +8,8 @@ using System.Threading;
 
 namespace SocketService.StockCore
 {
-    public class SocketClient
+    public class SocketClient : AbsSocket
     {
-        private static readonly ManualResetEvent ConnectDone = new ManualResetEvent(false);
-        private static readonly ManualResetEvent SendDone = new ManualResetEvent(false);
-        private static readonly ManualResetEvent ReceiveDone = new ManualResetEvent(false);
-
         SocketClient()
         {
         }
@@ -33,25 +29,27 @@ namespace SocketService.StockCore
             }
         }
 
-        private Socket socketClient { get; set; }
+        private IPAddress _ipAddress;
+        private Socket _socketServer;
+        private Thread _socketThread;
 
-        public void Run()
+        public override void Start()
         {
             var ipHostInfo = Dns.Resolve("169.254.105.250");
             var ipAddress = ipHostInfo.AddressList[0];
             var remoteEp = new IPEndPoint(ipAddress, 8090);
-            socketClient = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            _socketServer = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
-            socketClient.BeginConnect(remoteEp, ConnectCallback, socketClient);
+            _socketServer.BeginConnect(remoteEp, ConnectCallback, _socketServer);
             ConnectDone.WaitOne();
 
             Send("abc");
 
-            Receive(socketClient);
+            Receive(_socketServer);
             ReceiveDone.WaitOne();
 
-            socketClient.Shutdown(SocketShutdown.Both);
-            socketClient.Close();
+            _socketServer.Shutdown(SocketShutdown.Both);
+            _socketServer.Close();
         }
 
         private void Receive(Socket socketClient)
@@ -69,12 +67,12 @@ namespace SocketService.StockCore
             var byteData = Encoding.ASCII.GetBytes(data);
 
             // 开始发送数据到远程设备.  
-            socketClient.BeginSend(byteData, 0, byteData.Length, 0, SendCallback, socketClient);
+            _socketServer.BeginSend(byteData, 0, byteData.Length, 0, SendAsyncCallback, _socketServer);
 
             SendDone.WaitOne();
         }
 
-        private void SendCallback(IAsyncResult ar)
+        public override void SendAsyncCallback(IAsyncResult ar)
         {
 
             // 从state对象中获取socket  
@@ -87,7 +85,7 @@ namespace SocketService.StockCore
             SendDone.Set();
         }
 
-        private void ConnectCallback(IAsyncResult result)
+        public override void ConnectCallback(IAsyncResult result)
         {
             // 从state对象获取socket.  
             var client = (Socket)result.AsyncState;
@@ -117,5 +115,25 @@ namespace SocketService.StockCore
             ReceiveDone.Set();
         }
 
+
+        public override void AcceptAsyncCallback(IAsyncResult result)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void ReceiveAsyncCallback(IAsyncResult result)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Send(Socket handler, string msg)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Stop()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
