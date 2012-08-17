@@ -36,7 +36,7 @@ namespace SocketService
         private void BtnStartClick(object sender, EventArgs e)
         {
             SocketServer.GetInstance.Port = 8090;
-            SocketServer.GetInstance.Run();
+            SocketServer.GetInstance.Start();
             /*
             SocketThread = new Thread(() =>
                            {
@@ -78,6 +78,16 @@ namespace SocketService
         {
             var clientForm = new ClientForm();
             clientForm.Show();
+        }
+
+        private void txtInputMsg_Enter(object sender, EventArgs e)
+        {
+            this.txtInputMsg.Text = "";
+        }
+
+        private void btnSend_Click(object sender, EventArgs e)
+        {
+            SocketClient.GetInstance.Start();
         }
 
     }

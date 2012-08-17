@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.txt_log = new System.Windows.Forms.ListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtInputMsg = new System.Windows.Forms.TextBox();
+            this.btnSend = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
@@ -59,22 +59,24 @@
             this.txt_log.Size = new System.Drawing.Size(474, 340);
             this.txt_log.TabIndex = 1;
             // 
-            // textBox1
+            // txtInputMsg
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 383);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(534, 21);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "请输入信息...";
+            this.txtInputMsg.Location = new System.Drawing.Point(12, 383);
+            this.txtInputMsg.Name = "txtInputMsg";
+            this.txtInputMsg.Size = new System.Drawing.Size(534, 21);
+            this.txtInputMsg.TabIndex = 2;
+            this.txtInputMsg.Text = "请输入信息...";
+            this.txtInputMsg.Enter += new System.EventHandler(this.txtInputMsg_Enter);
             // 
-            // button1
+            // btnSend
             // 
-            this.button1.Location = new System.Drawing.Point(552, 382);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "发 送";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSend.Location = new System.Drawing.Point(552, 382);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(82, 23);
+            this.btnSend.TabIndex = 3;
+            this.btnSend.Text = "发 送";
+            this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // label1
             // 
@@ -130,7 +132,7 @@
             this.btnClientForm.UseVisualStyleBackColor = true;
             this.btnClientForm.Click += new System.EventHandler(this.btnClientForm_Click);
             // 
-            // MainSocket
+            // ServerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -140,13 +142,13 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnSend);
+            this.Controls.Add(this.txtInputMsg);
             this.Controls.Add(this.txt_log);
             this.Controls.Add(this.listBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "MainSocket";
+            this.Name = "ServerForm";
             this.ShowInTaskbar = false;
             this.Text = "服务端";
             this.ResumeLayout(false);
@@ -158,8 +160,8 @@
 
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListBox txt_log;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtInputMsg;
+        private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NotifyIcon notifyIcon1;

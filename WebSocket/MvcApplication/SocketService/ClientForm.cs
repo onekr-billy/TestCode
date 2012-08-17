@@ -22,7 +22,7 @@ namespace SocketService
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SocketClient.GetInstance.Run();
+            SocketClient.GetInstance.Start();
         }
 
     }
