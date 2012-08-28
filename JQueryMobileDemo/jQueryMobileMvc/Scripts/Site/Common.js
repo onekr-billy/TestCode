@@ -41,14 +41,17 @@ $(function () {
 // 比如： http://localhost:38839/User/Info 页面id：User_Info_Page
 var PageFuns = {
     Index_Page: function () {
+        
         if (Debug)
             alert("加载 Index_Page");
     },
     User_Page: function () {
+        
         if (Debug)
             alert("加载 User_Page");
     },
     User_Info_Page: function () {
+        
         if (Debug)
             alert("加载 User_Info_Page");
         $("#info_name").append("abc");
@@ -107,8 +110,10 @@ PageFun.Init = function (pageId) {
 //#endregion
 
 function marketNavbar(index) {
-    $(".navbar-link").removeClass("ui-btn-active ui-state-persist")
-        .eq(index).addClass("ui-btn-active ui-state-persist");
+    var $obj = $(".navbar-link");
+    $obj.removeClass("ui-btn-active ui-state-persist");
+    var thisNav = $obj.eq(index);
+    thisNav.addClass("ui-btn-active ui-state-persist");
 }
 
 function Log(data) {
