@@ -13,11 +13,13 @@ namespace jQueryMobileMvc.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.Market = DateTime.Now;
             return View();
         }
 
         public ActionResult Info()
         {
+            ViewBag.Market = DateTime.Now;
             return View();
         }
 

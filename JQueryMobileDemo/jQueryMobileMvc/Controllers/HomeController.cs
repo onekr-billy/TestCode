@@ -11,7 +11,7 @@ namespace jQueryMobileMvc.Controllers
         public ActionResult Index()
         {
             ViewBag.Message = "欢迎使用 ASP.NET MVC!";
-
+            
             return View();
         }
 

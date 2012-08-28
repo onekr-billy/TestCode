@@ -1,6 +1,7 @@
 ﻿/// <reference path="../jQueryMobile/jquery-1.8.0.js" />
 /// <reference path="../jQueryMobile/jquery.mobile-1.1.1.js" />
 
+var Debug = false;
 window.mobile = {};
 window.mobile.pages = {};
 
@@ -40,16 +41,16 @@ $(function () {
 // 比如： http://localhost:38839/User/Info 页面id：User_Info_Page
 var PageFuns = {
     Index_Page: function () {
-        marketNavbar(0);
-        alert("加载 Index_Page");
+        if (Debug)
+            alert("加载 Index_Page");
     },
     User_Page: function () {
-        marketNavbar(1);
-        alert("加载 User_Page");
+        if (Debug)
+            alert("加载 User_Page");
     },
     User_Info_Page: function () {
-        alert("加载 User_Info_Page");
-        marketNavbar(2);
+        if (Debug)
+            alert("加载 User_Info_Page");
         $("#info_name").append("abc");
         $("#info_save").click(function () {
             Log(0);
@@ -90,7 +91,8 @@ PageFun.Init = function (pageId) {
     }
     var fun = PageFun.GetFun(pageId);
     var cacheFun = window.mobile.pages[pageId];
-    alert("跳转到" + pageId);
+    if (Debug)
+        alert("跳转到" + pageId);
     if (typeof cacheFun == "undefined") {
         if (typeof fun == "function") {
             fun();

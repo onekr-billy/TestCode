@@ -16,25 +16,15 @@
     <link rel="apple-touch-icon" size="57x57" href="/Content/themes/base/icon/apple-touch-icon.png" />
     <link rel="apple-touch-icon" href="/Content/themes/base/icon/apple-touch-icon.png" />
     <link rel="canonical" href="http://m.jquerymobile.me/" />
-    <title>@ViewBag.Title</title>
     <link href="@Url.Content("~/Content/themes/jQueryMobile/default/jquery.mobile-1.1.1.css")" rel="stylesheet" type="text/css" />
     <link href="@Url.Content("~/Content/themes/jQueryMobile/default/bartender.css")" rel="stylesheet" type="text/css" />
-    <script src="@Url.Content("~/Scripts/jQueryMobile/jquery-1.8.0.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jQueryMobile/jquery-1.7.2.js")" type="text/javascript"></script>
     <script src="@Url.Content("~/Scripts/Site/jquerymobile.initbefore.js")" type="text/javascript"></script>
     <script src="@Url.Content("~/Scripts/jQueryMobile/jquery.mobile-1.1.1.js")" type="text/javascript"></script>
     <script src="@Url.Content("~/Scripts/Site/Common.js")" type="text/javascript"></script>
+    <title>@ViewBag.Title</title>
 </head>
 <body>
-    <div data-role="page" id="@Request.Url.PathAndQuery.Trim('/').Replace('/', '_')_Page" >
-        <div data-role="header" data-position="fixed">
-            @Html.Partial("_Header")
-        </div>
-        <div data-role="content">
-            @RenderBody()
-        </div>
-        <div data-role="footer" data-theme="a" data-id="mainFooter" data-position="fixed">
-            @Html.Partial("_Footer")
-        </div>
-    </div>
+    @Html.Partial("_Page", new { PageId = "", Body = RenderBody() })
 </body>
 </html>
