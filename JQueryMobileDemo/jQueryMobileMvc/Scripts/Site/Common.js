@@ -41,17 +41,17 @@ $(function () {
 // 比如： http://localhost:38839/User/Info 页面id：User_Info_Page
 var PageFuns = {
     Index_Page: function () {
-        
+
         if (Debug)
             alert("加载 Index_Page");
     },
     User_Page: function () {
-        
+        $("#abc").append("ccc");
         if (Debug)
             alert("加载 User_Page");
     },
     User_Info_Page: function () {
-        
+
         if (Debug)
             alert("加载 User_Info_Page");
         $("#info_name").append("abc");
@@ -91,12 +91,17 @@ PageFun.GetFun = function (pageId) {
 PageFun.Init = function (pageId) {
     if (typeof pageId == "undefined") {
         pageId = $(document.body).find("div[data-role = 'page']").eq(0).attr("id");
+        window.mobile.pages["MainPage"] = pageId;
+    } else {
+        if (window.mobile.pages["MainPage"] == pageId) {
+            return;
+        }
     }
+
     var fun = PageFun.GetFun(pageId);
     var cacheFun = window.mobile.pages[pageId];
-    if (Debug)
-        alert("跳转到" + pageId);
-    if (typeof cacheFun == "undefined") {
+    //if (typeof cacheFun == "undefined") {
+    if (true) {
         if (typeof fun == "function") {
             fun();
             window.mobile.pages[pageId] = fun;
